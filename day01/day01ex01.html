@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color:yellow;
+        }
+
+        #heading {
+            color:#ffff00;
+            background-color: red;
+        }
+
+        .welcome {
+            color :green;
+            background-color: orange;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 id="heading">Hello World</h1>
+    <h3 class="welcome">안녕하세요.</h3>
+    <h3>반갑습니다.</h3>
+
+    <script>
+        // DOM - Document Object Model
+        var h1Tag = document.getElementById("heading");
+        console.log(h1Tag);
+        console.dir(h1Tag)
+    </script>
+</body>
+</html>
