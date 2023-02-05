@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function people () {
+            this.name = "아"
+            this.move = function() {
+                // console.log(this); // People
+                // console.log(this.name);
+                var cnt = 0;
+                var ref = setInterval(function() {
+                    // console.log(this); // window
+                    // console.log(this.name); // People의 name을 접근하지 않는다.
+                    // setInterval 내부에서 People의 멤버를 접근하는 방법?
+                    if(cnt++ >= 2) {
+                        clearInterval(ref);
+                    }
+                }, 500);
+            }
+        }
+    </script>
+</body>
+</html>
